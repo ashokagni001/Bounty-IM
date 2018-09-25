@@ -14,7 +14,7 @@ class Form extends Component {
               <Breadcrumb>
                 <BreadcrumbItem><a href="#/">Home</a></BreadcrumbItem>
                 <BreadcrumbItem active>Form</BreadcrumbItem>
-                <BreadcrumbItem><a href="#">Chart</a></BreadcrumbItem>
+                <BreadcrumbItem><a href="#/user">User</a></BreadcrumbItem>
               </Breadcrumb>
             </Col>
             <Col md="12">
