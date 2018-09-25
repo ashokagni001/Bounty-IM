@@ -1,6 +1,6 @@
 @import "../Utils/Mixins";
 
-.ui-home {
+.ui-form {
   .breadcrumb {
     background-color: $white;
     margin: 10px 0;
@@ -9,10 +9,10 @@
     }
   }
 
-  // Task Form
-  .ui-task-form {
-    .task-input {
-      margin-bottom: 80px;
+  // Dashboard Form
+  .ui-dashboard-form {
+    .chart-input {
+      margin-bottom: 25px;
     }
     .form-label {
       font-size: 18px;
@@ -22,10 +22,23 @@
     .form-input {
       min-height: 60px;
     }
+    .form-text-area {
+      min-height: 120px;
+    }
     .form-notification {
       color: $semi-dark-gray;
       font-size: 14px;
       margin-bottom: 8px;
+    }
+    .chart-badge {
+      font-size: 16px;
+      margin: 5px;
+      padding: 8px;
+      &.disabled {
+        background-color: $semi-dark-gray;
+        color: $black;
+        text-decoration: line-through;
+      }
     }
   }
 }

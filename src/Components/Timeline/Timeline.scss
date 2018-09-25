@@ -3,9 +3,9 @@
 .ui-timeline {
   .timeline {
     box-shadow: 0 4px 3px 2px $medium-gray;
+    height: calc(100vh - 56px);
     list-style: none;
     margin-bottom: 0;
-    min-height: calc(100vh - 56px);
     padding: 0;
     position: relative;
     .submit-button {
@@ -17,6 +17,12 @@
     }
     li {
       position: relative;
+      &.flex-task-timeline {
+        min-height: calc(100% - 340px);
+      }
+      &.flex-dashboard-timeline {
+        min-height: calc(100% - 285px);
+      }
       .empty-timeline {
         margin: 0;
         min-height: 75px;
@@ -58,6 +64,9 @@
       padding: 5px 12px;
       position: relative;
       line-height: 1.4;
+      &.minimize {
+        min-height: 145px;
+      }
       .title {
         margin: 0;
       }

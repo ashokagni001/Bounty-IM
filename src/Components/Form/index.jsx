@@ -1,24 +1,24 @@
 import React, {Component} from "react";
 import {Breadcrumb, BreadcrumbItem, Col, Row} from "reactstrap";
-import Timeline from "../Timeline/TaskForm";
-import TaskForm from "./TaskForm";
-import "./Home";
+import Timeline from "../Timeline/DashboardForm";
+import DashboardForm from "./DashboardForm";
+import "./Form";
 
-class Home extends Component {
+class Form extends Component {
   render() {
     return (
-      <div className="ui-home">
+      <div className="ui-form">
         <Row>
           <Col md="8">
             <Col md="12">
               <Breadcrumb>
-                <BreadcrumbItem active>Home</BreadcrumbItem>
-                <BreadcrumbItem><a href="#/form">Form</a></BreadcrumbItem>
+                <BreadcrumbItem><a href="#/">Home</a></BreadcrumbItem>
+                <BreadcrumbItem active>Form</BreadcrumbItem>
                 <BreadcrumbItem><a href="#">Chart</a></BreadcrumbItem>
               </Breadcrumb>
             </Col>
             <Col md="12">
-              <TaskForm />
+              <DashboardForm />
             </Col>
           </Col>
           <Col md="4" className="padding-right-0">
@@ -30,4 +30,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Form;

@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCoffee, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import "./Timeline";
 
-class Timeline extends React.Component {
+class ChartFormTimeline extends React.Component {
   render() {
     return (
       <div className="ui-timeline">
@@ -23,7 +23,7 @@ class Timeline extends React.Component {
               </p>
             </div>
           </li>
-          <li>
+          <li className="flex-task-timeline">
             <i className="timeline-icon">
               <FontAwesomeIcon icon={faCoffee} />
             </i>
@@ -46,4 +46,4 @@ class Timeline extends React.Component {
   }
 }
 
-export default Timeline;
+export default ChartFormTimeline;

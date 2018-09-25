@@ -2,23 +2,23 @@ import React, {Component} from "react";
 import {Button, Col, Container, Form, FormGroup, Input, Label, Row} from "reactstrap";
 import "./Home";
 
-class ChartForm extends Component {
+class TaskForm extends Component {
   render() {
     return (
-      <div className="ui-chart-form">
+      <div className="ui-task-form">
         <Container>
           <Row>
             <Col md="2" />
             <Col md="8">
               <Form>
-                <FormGroup className="chart-input">
+                <FormGroup className="task-input">
                   <Label
                     className="form-label"
                     for="name">
                     Name
                   </Label>
                   <p className="form-notification">
-                    Give a name for the chart
+                    Give a name for the Task
                   </p>
                   <Input
                     className="form-input"
@@ -49,4 +49,4 @@ class ChartForm extends Component {
   }
 }
 
-export default ChartForm;
+export default TaskForm;
