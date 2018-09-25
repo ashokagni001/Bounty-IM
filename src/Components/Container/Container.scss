@@ -1,3 +1,5 @@
-.app {
-  background-color: #777777;
+@import "../Utils/Mixins";
+
+.ui-container {
+  background-color: $white;
 }
