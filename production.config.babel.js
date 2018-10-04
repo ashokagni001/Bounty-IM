@@ -19,7 +19,8 @@ const config = {
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, "public/index.html"),
       template: path.join(__dirname, "src/index.html")
-    })
+    }),
+    "@babel/plugin-proposal-class-properties"
   ],
   module: {
     rules: [{

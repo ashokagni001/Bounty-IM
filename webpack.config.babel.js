@@ -39,7 +39,8 @@ const config = {
           babelrc: false,
           plugins: [
             "@babel/plugin-transform-regenerator",
-            "@babel/plugin-proposal-object-rest-spread"
+            "@babel/plugin-proposal-object-rest-spread",
+            "@babel/plugin-proposal-class-properties"
           ],
           presets: [
             "@babel/preset-env",
