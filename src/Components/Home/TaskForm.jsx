@@ -1,14 +1,19 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { reduxForm } from 'redux-form';
 import {Button, Col, Container, Form, FormGroup, Input, Label, Row} from "reactstrap";
 
 import "./Home";
+import { saveChartType } from '../../Action/ChartTypeAction';
 import TextField from '../FormComponents/TextField';
 import ChartTypeGrid from './ChartTypeGrid';
 import { required } from '../../utils/Validation';
 
+const mapDispatchToProps = dispatch => ({
+  saveChartType: chartTypeObj => dispatch(saveChartType(chartTypeObj))
+});
 
 class TaskForm extends Component {
   constructor() {
@@ -22,6 +27,7 @@ class TaskForm extends Component {
   }
   handleFormSubmit = (value) => {
     let { chartTypeList } = this.state;
+    this.props.saveChartType(value);
     chartTypeList.count += 1;
     chartTypeList.values.push(value);
     this.setState({chartTypeList : chartTypeList});
@@ -95,9 +101,12 @@ class TaskForm extends Component {
 }
 
 TaskForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  saveChartType: PropTypes.func.isRequired
 };
 
+const ChartType = connect(null, mapDispatchToProps)(TaskForm);
+
 export default reduxForm({
-  form: 'ChartType'
-})(TaskForm);
+  form: 'Add Chart'
+})(ChartType);
